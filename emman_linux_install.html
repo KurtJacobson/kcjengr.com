@@ -2,19 +2,69 @@
 
 <html>
 
-    <head>
-        <title>For Dummies</title>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    </head>
+<head>
+<title>For Dummies</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
 
-    <body>
-        <h1/> Linux Install for Dummies </h1>
-        <hr>
-        <p>Extremely poor and incomplete Linux install instructions designed to 
-        hopelessly confuse even the most linux savvy nerd.</p>
+<body>
 
-        <p>More to come!<p>
+<h1/> Linux Install for Dummies </h1>
+
+<hr>
+
+<p>Extremely poor and incomplete Linux install instructions designed to 
+hopelessly confuse even the most linux savvy nerd.</p>
+
+<p> 24 Aug 17</p>
+
+<h2>First things first</h2>
+
+<p>First first thing, <b>Make sure EVERYTHING of ANY value on the target machine is BAKED UP!</b> (Yes, I was shouting) Especially since this is your first attempt at installing Linux. If you do everything right the windoze OS and file system should remain unharmed and fully functional, but there is no point in taking any risks with pictures of Adam and the like.</p>
+
+<p>Second first thing, decide what Linux flavor you want; there are many choices, 
+<a href="https://www.ubuntu.com/">Ubuntu</a>, 
+<a href="https://www.linuxmint.com/">Mint</a>, 
+<a href="https://www.debian.org/">Debian</a>, and 
+<a href="https://www.archlinux.org/">Arch Linux</a>, 
+
+to name a few. I use Debian as it is it does not come with a bunch of junk that I will just end up uninstalling. The only problem with going with Debian is that it can be a little bit more tricky to install than, say, Ubuntu. This is especially the case if you are installing Linux along side an existing operating system like Windoze (which you are!). Because of this I am tempted to tell you to start off with Ubuntu and then once you get a little experience with Linux you can switch to Debian. But if you are willing to do a little bit of research and take your time to do things right I feel confidant you will be able to install Debian successfully and with out determent to the existing windows install. I am going to leave decision of what Linux flavor to use up to you (and to the owners of the computer! :) ) The first few steps are the same whatever way you go anyway.</p>
+
+
+<h2>Download the Linux ISO</h2>
+
+<p>Once you have decided on the Linux flavor you want you will to locate and download the Disk Image or ISO. 
+
+<h3>Ubuntu</h3>
+<p>The LTS (Long Term Support) download for Ubuntu is <a href="https://www.ubuntu.com/download/desktop">here</a>. Should not be anything more than hitting the download button and waiting, and waiting, and waiting. Maybe do some homework or, better yet, make some popcorn to eat while you watch the progress par <i>not</i> progress! (I always did wonder how it became named a <i>progress</i> bar, whoever started that was must not have been very observant.)
+
+<h3>Debian</h3>
+<p>For the Debian download there are a lot more chooses than for Ubuntu (one of the advantages of Debian). You need to chose the architecture (in your case almost certainly amd64, but check if your windows is 64 bit to make sure) and what Desktop Environment you want. The Desktop Environment basically determines the aesthetics. How the menus are laid out, the windows are managed, etc.  I have used most of the Desktop Environments but I always end up going back to good old xfce.  Xfce is by no means slick or flashy, but it is one of the lightest and fastest out there and it JustWorks(TM).
+
+<p>Here is a link to the <a href="https://cdimage.debian.org/mirror/cdimage/release/current-live/amd64/iso-hybrid/">Debian downloads page.</a></p>
+
+<p>Download links are are the bottom of that page. I would suggest going with "debian-live-9.1.0-amd64-xfce.iso".<p>
+
+
+
+
+
+
+<h2>Create a Bootable USB drive. This section not done yet!!!!!! </h2>
+
+<p>Download Rufus, a utility for creating bootable USB drives. It does not require installation: https://rufus.akeo.ie/
+
+Select a 2Gb or larger USB thumb drive. All the information on it will be overwritten so use a new one or one you don't care about. (After you are done with the USB drive you can reformat it and use it for other purposes. However I would suggest leaving Ubuntu/Debian on it and putting it on your key ring. It may come in handy at some point to recover files if your Windoze PC dies on you!)
+
+Follow the instructions to create the bootable USB here: https://www.ubuntu.com/download/desktop/create-a-usb-stick-on-windows
+
+Plug the USB into the target computer and boot from the USB drive. If you want to have both Windoze and Linux on the same PC it is best to install Windoze first.
+
+You can run Ubuntu from the flash drive and get a feel for it before installing, but none of the changes you make or programs you install will be saved.
+
+Install Ubuntu. If this installation is only for machine control enter a short, easy to type password when prompted.
+
     </body>
 
 </html>
