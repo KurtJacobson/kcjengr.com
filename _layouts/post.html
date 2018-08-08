@@ -82,11 +82,23 @@ layout: default
         {% endif %}
     {% endif %}
 </div>
-<div class="pagination">
-    {% if page.next %}
-    <a class="btn btn-default" href="{{ site.baseurl}}{{ page.next.url }}" class="next">{{ trans.newer_post }}</a>
-    {% endif %}
+
+<!-- older/newer post navigation -->
+<nav>
+  <ul class="pager">
     {% if page.previous %}
-    <a class="btn btn-default" href="{{ site.baseurl}}{{ page.previous.url }}" class="previous">{{ trans.older_post }}</a>
+    <li class="previous">
+        <a href="{{ site.baseurl}}{{ page.previous.url }}">
+            <span aria-hidden="true">&larr;</span> Older
+        </a>
+    </li>
     {% endif %}
-</div>
+    {% if page.next %}
+    <li class="next">
+        <a href="{{ site.baseurl}}{{ page.next.url }}">Newer
+            <span aria-hidden="true">&rarr;</span>
+        </a>
+    </li>
+    {% endif %}
+  </ul>
+</nav>
