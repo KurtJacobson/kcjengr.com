@@ -146,6 +146,10 @@ body {
     background-color: $nav-bar-icon-bar;
 }
 
+pre.highlight {
+  background-color: white;
+}
+
 /*Improve look and feel of code blocks with line numbers*/
 /*Reference: https://www.minh.io/blog/2015/06/28/jekyll-line-numbers */
 
@@ -187,10 +191,15 @@ body {
     border-right: 1px solid #ccc;
   }
 
+  .code {
+    width: 100%;
+  }
+
   pre {
     pre {
       border: none;
       margin-bottom: 0px;
+      background-color: white;
     }
   }
 }
