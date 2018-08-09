@@ -1,8 +1,8 @@
 {% assign trans = site.data.values[site.lan] %}
 <div class="footer">
-    <p style="margin-bottom: 0px">&copy; {{ site.time | date: '%Y' }} {{ site.author }}</p>
+    <p>&copy; {{ site.time | date: '%Y' }} {{ site.author }}</p>
 
-    <p style="margin-top: 0px">
+    <p>
     Powered by:
             {% for thank in site.data.thanks %}
                 <a href="{{ thank.url }}">
