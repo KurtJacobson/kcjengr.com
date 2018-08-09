@@ -130,5 +130,5 @@ log.debug("Hello from the sub module")
 Of course you can get as fancy as you want with formatting the terminal and log 
 file outputs. Only the log level will be colorized.
 
-The Python example files can be downloaded the GitHub Gist located 
+The Python example files can be downloaded from the GitHub Gist located 
 [here](https://gist.github.com/KurtJacobson/48e750701acec40c7161b5a2f79e6bfd).
