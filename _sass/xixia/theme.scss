@@ -131,6 +131,10 @@ body {
     background-color: $nav-bar-open-a-background-color;
 }
 
+.navbar-custom .navbar-nav > .open > .dropdown-menu {
+    background-color: white;
+}
+
 .navbar-custom .navbar-brand {
     color: $nav-bar-brand-color;
 }
