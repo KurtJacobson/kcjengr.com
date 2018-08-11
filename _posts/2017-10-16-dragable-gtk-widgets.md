@@ -33,8 +33,7 @@ must not exceed the bounds of its parent.
 
 ### Result
 
-![Example]({{ site.baseurl }}/assets/images/2017-10-16-move_btn.gif)
-
+{% include image.html name="move_btn.gif" %}
 
 ### Example Code
 

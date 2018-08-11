@@ -8,6 +8,10 @@ body {
     height: 100%;
 }
 
+figcaption {
+    font-style: italic;
+}
+
 .wrap {
     position: relative;
     min-height: 100%;
@@ -170,11 +174,6 @@ pre.highlight {
     opacity: $opacity;
     $opacity-ie: $opacity * 100;
     filter: alpha(opacity=$opacity-ie); //IE8
-}
-
-/*The file name caption code*/
-.lineno-container > figcaption {
-    font-style: italic;
 }
 
 .lineno-container > figure > pre {

@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Transparent Window in Gtk+3
-date:   2017-11-03 00:13:00 +0500
+date:   2017-11-02 20:27:00 +0500
 categories: Programing
 tags: Python Gtk+3
 description: Example of how to make a fully transparent window in Gtk+3.
@@ -17,7 +17,7 @@ region for taking a screen capture?
 
 ### Result
 
-![Example]({{ site.baseurl }}/assets/images/2017-11-03-transparent-gtk-window.png)
+{% include image.html name="transparent-window.png" %}
 
 
 ### Code

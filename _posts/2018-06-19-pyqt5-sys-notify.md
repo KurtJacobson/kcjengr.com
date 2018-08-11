@@ -33,6 +33,8 @@ callbacks will not work, but the notifications will still be shown.
 
 ![Example Notification]({{site.baseurl}}/assets/images/2018-06-19-pyqt5-sys-notify.png)
 
+{% include image.html name="notification.png" %}
+
 
 ### Code
 

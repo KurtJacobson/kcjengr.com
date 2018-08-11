@@ -26,12 +26,9 @@ classed so it should render properly with different themes.
 
 ### Results
 
-_Custom HeaderBar with Adwaita theme_
-![Example]({{ site.baseurl }}/assets/images/2017-09-29-custom-gtk-headerbar-light.png)
+{% include image.html name="light-theme.png" caption="Custom HeaderBar with Adwaita theme" %}
 
-_Custom HeaderBar with dark theme_
-
-![Example]({{ site.baseurl }}/assets/images/2017-09-29-custom-gtk-headerbar-dark.png)
+{% include image.html name="dark-theme.png" caption="Custom HeaderBar with dark theme" %}
 
 
 ### Code
