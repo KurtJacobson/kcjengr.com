@@ -1,20 +1,20 @@
 ---
 layout: post
-title:  SysNotify - Pure Python System Notification's for PyQt5
+title:  SysNotify - Desktop Notification module for PyQt5
 date:   2018-06-19 12:00:00 +0500
 categories: Programing
 tags: Python PyQt5
-description: A pure Python system notification module for use with PyQt5 based Linux desktop apps.
+description: A pure Python system notification module for use with PyQt5 Linux desktop apps.
 ---
 
-SysNotify is a simple, pure python based notification module for use with PyQt5
+SysNotify is a simple, pure python notification module for use with PyQt5 desktop
 applications. It uses python-dbus to communicate directly with the systems
 notification server, and supports callback from notification actions via the
 pyqt5 dbus main loop. It provides basically the same features as
 the gtk-2.0 pynotify library, but does not require any GTK libraries, so
-avoids the dependency hell which can be a problem with Gtk. It is similar to and based on
-[notify2](https://pypi.org/project/notify2/), but is simplified and updated to 
-support PyQt5.
+avoids the dependency hell which can be a problem with Gtk. It is similar to
+and based on [notify2](https://pypi.org/project/notify2/), but is simplified
+and updated to support PyQt5.
 
 If `python-dbus.mainloop.pyqt5` is not installed any notification action
 callbacks will not work, but the notifications will still be shown.
@@ -31,7 +31,7 @@ callbacks will not work, but the notifications will still be shown.
 
 ### Example Notification
 
-![Example Notification]({{%site.baseurl%}}/assets/images/2018-06-19-pyqt5-sys-notify.png)
+![Example Notification]({{site.baseurl}}/assets/images/2018-06-19-pyqt5-sys-notify.png)
 
 
 ### Code
