@@ -7,7 +7,6 @@ tags: RF45 Lathe
 description: 3D Printed Epicyclic Bevel Gear Reducer.
 
 gallery:
-  - image: render_side.png
   - image: render_back.png
   - image: render_front.png
   - image: printed.jpg
@@ -26,3 +25,5 @@ You can find the files and more information [here](https://grabcad.com/library/e
 {% include image.html name="render_side.png" %}
 
 {% include image-gallery.html folder="/assets/images" %}
+
+
