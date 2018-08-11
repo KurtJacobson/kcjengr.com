@@ -4,12 +4,12 @@
   .image-gallery a img {width: 100%;}
 </style>
 
-{% capture imageDir %}/assets/posts/{{ page.date | date: "%Y-%m-%d" }}-{{ page.slug }}/{% endcapture %}
+{% capture imageDir %}assets/posts/{{ page.date | date: "%Y-%m-%d" }}-{{ page.slug }}{% endcapture %}
 
 <div class="image-gallery">
 {% for item in page.gallery %}
   {% capture imageUrl %}{{ imageDir }}/{{ item.image }}{% endcapture %}
-  <a href="{{ imageUrl }}">
+  <a href="{{ site.baseurl }}/{{ imageUrl }}">
     <img src="//images.weserv.nl/?url=kcjengr.github.io/{{ imageUrl }}&w=300&h=300&output=jpg&q=50&t=square" />
   </a>
 {% endfor %}
