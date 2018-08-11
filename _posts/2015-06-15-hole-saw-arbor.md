@@ -14,4 +14,4 @@ the little pins that drive the saw tend to shear off. I have a job coming up
 where I will need to drill reasonably neat holes in cast iron with a hole saw,
 so I made up this "Heavy Duty" arbor.
 
-{% include image.html name="arbor.jpg" %}
+{% include image.html name="arbor.jpg" lightbox=true %}
