@@ -21,6 +21,6 @@
 {% for item in page.gallery %}
   {% capture imageUrl %}{{ imageDir }}/{{ item.image }}{% endcapture %}
   <a href="{{ site.baseurl }}/{{ imageUrl }}">
-    <img src="//images.weserv.nl/?url=kcjengr.github.io/{{ imageUrl }}&w=300&h=300&output=jpg&q=50&t=square" />
+    <img src="//images.weserv.nl/?url=kcjengr.github.io/{{ imageUrl }}&w=200&h=200&output=jpg&q=50&t=square" />
   </a>
 {% endfor %}
