@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-{% assign trans = site.data.values[site.lan] %}
 {% for post in paginator.posts %}
 <div class="well article">
 
@@ -32,16 +31,49 @@ layout: default
 </div>
 {% endfor %}
 
-<div class="pagination">
-  {% if paginator.previous_page %}
-      {% if paginator.previous_page == 1 %}
-        <a class="btn btn-default" href="{{ site.baseurl}}/index.html" class="previous">Newer</a>
-      {% else %}
-        <a class="btn btn-default" href="{{ site.baseurl}}/page{{ paginator.previous_page }}" class="previous">Newer</a>
-      {% endif %}
-  {% endif %}
-  <span class="page_number ">{{ trans.page }}: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-  {% if paginator.next_page %}
-    <a class="btn btn-default" href="{{ site.baseurl}}/page{{ paginator.next_page }}" class="next">Older</a>
-  {% endif %}
-</div>
+<nav aria-label="Page navigation">
+  <ul class="pagination">
+    {% if paginator.previous_page == 1 %}
+    <li>
+      <a href="{{ site.baseurl }}/index.html" aria-label="Previous Page">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    {% elsif paginator.page == 1 %}
+    <li class="disabled">
+      <a href="#" aria-label="Previous Page">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    {% else %}
+    <li>
+      <a href="{{ site.baseurl }}/page{{ paginator.previous_page }}" aria-label="Previous Page">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    {% endif %}
+    <!-- page number items -->
+    <li {% if paginator.page == 1 %}class="active"{% endif %}>
+      <a href="{{ site.baseurl }}/index.html">1</a>
+    </li>
+    {% for page_num in (2..paginator.total_pages) %}
+    <li {% if page_num == paginator.page %}class="active"{% endif %}}>
+      <a href="{{ site.baseurl }}/page{{ page_num }}">{{ page_num }}</a>
+    </li>
+    {% endfor %}
+    <!-- next page arrow button -->
+    {% if paginator.next_page %}
+    <li>
+      <a href="{{ site.baseurl }}/page{{ paginator.next_page }}" aria-label="Next Page">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+    {% else %}
+    <li class="disabled">
+      <a href="#" aria-label="Next Page">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+    {% endif %}
+  </ul>
+</nav>
