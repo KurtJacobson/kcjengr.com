@@ -1,4 +1,3 @@
-{% assign trans = site.data.values[site.lan] %}
 <div class="footer">
     <p>&copy; {{ site.time | date: '%Y' }} {{ site.author }}</p>
 
@@ -20,6 +19,9 @@
     {% include disqus-counts.html %}
     {% include analytics.html %} 
 -->
+
+<script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/bootstrap.min.js"></script>
 
 </body>
 </html>
