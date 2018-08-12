@@ -1,5 +1,5 @@
 {% capture imagePath %}{{ page.date | date: "%Y-%m-%d" }}-{{ page.slug }}/{{ include.name }}{% endcapture %}
-{% if include.lightbox %}
+{% if include.lightbox == true %}
 <figure>
   <figcaption>{{ include.caption }}</figcaption>
   <a href="/assets/posts/{{ imagePath }}" class="lightbox-image" style="cursor: pointer">

@@ -1,7 +1,18 @@
 <style>
-  .image-gallery {overflow: auto; margin-left: -1%;}
-  .image-gallery a {float: left; display: block; margin: 0 0 1% 1%; width: 19%;}
-  .image-gallery a img {width: 100%;}
+  .image-gallery {
+    margin-top: 10px;
+    overflow: auto;
+    margin-left: -1%;
+  }
+  .image-gallery a {
+    float: left;
+    display: block;
+    margin: 0 0 1% 1%;
+    width: 19%;
+  }
+  .image-gallery a img {
+    width: 100%;
+  }
 </style>
 
 {% capture imageDir %}assets/posts/{{ page.date | date: "%Y-%m-%d" }}-{{ page.slug }}{% endcapture %}
