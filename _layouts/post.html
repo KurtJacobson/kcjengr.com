@@ -1,8 +1,10 @@
 ---
 layout: default
 ---
-<div class="well article">
-        <h2><a href="{{ site.baseurl}}{{ page.url }}">{{ page.title }}</a></h2>
+<div class="well article anchor">
+        <h2 class="no-anchor">
+            <a href="{{ site.baseurl}}{{ page.url }}">{{ page.title }}</a>
+        </h2>
         <span class="post-date">
             {% assign date_format = site.date_format.title %}
             {{ page.date | date: date_format }}

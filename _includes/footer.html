@@ -1,4 +1,4 @@
-<div class="footer">
+ <div class="footer">
     <p>&copy; {{ site.time | date: '%Y' }} {{ site.author }}</p>
 
     <p>
@@ -22,6 +22,11 @@
 
 <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
 <script src="{{ site.baseurl }}/assets/js/bootstrap.min.js"></script>
+<script src="{{ site.baseurl }}/assets/js/anchor.min.js"></script>
+<!-- Add heading anchors before the closing body tag. -->
+<script>
+anchors.add('.anchor h2:not(.no-anchor), .anchor h3:not(.no-anchor), .anchor h4:not(.no-anchor)');
+</script>
 
 </body>
 </html>
