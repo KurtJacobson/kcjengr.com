@@ -3,13 +3,13 @@ layout: default
 ---
 <div class="well article anchor">
     <h2 class="no-anchor">
-        <a href="{{ site.baseurl}}{{ page.url }}">{{ page.title }}</a>
+        {{ page.title }}
     </h2>
     <span class="post-date">
         {% assign date_format = site.date_format.title -%}
         {{ page.date | date: date_format }}
     </span>
-    <hr style="border-top:1px solid #28323C;"/>
+    <hr>
     {%- if site.comments and page.comments %}
         {% if site.disqus != '' %}
         <p class="author"><a href="#disqus_thread" data-disqus-identifier="{{ page.url | slugify }}">Comments</a></p>
@@ -19,7 +19,7 @@ layout: default
     {% endif -%}
     <div class="post-content">
     {{ content }}
-    <hr style="border-top:1px solid #28323C;"/>
+    <hr"/>
 
     <!-- post categories -->
     {% unless page.categories == empty -%}
