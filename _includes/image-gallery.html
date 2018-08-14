@@ -18,9 +18,9 @@
 {% capture imageDir %}assets/posts/{{ page.date | date: "%Y-%m-%d" }}-{{ page.slug }}{% endcapture %}
 
 <div class="image-gallery">
-{% for item in page.gallery %}
+{%- for item in page.gallery -%}
   {% capture imageUrl %}{{ imageDir }}/{{ item.image }}{% endcapture %}
   <a href="{{ site.baseurl }}/{{ imageUrl }}">
     <img src="//images.weserv.nl/?url=kcjengr.github.io/{{ imageUrl }}&w=200&h=200&output=jpg&q=50&t=square" />
   </a>
-{% endfor %}
+{%- endfor -%}

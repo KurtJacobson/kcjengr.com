@@ -8,34 +8,34 @@
         </h3>
     </header>
     <div class="text-center">
-        {{ site.description }}
+    {{ site.description }}
     </div>
 </div>
-
-{% if site.data.tops.size > 0 %}
+<!-- top posts -->
+{%- if site.data.tops.size > 0 %}
 <div class="sidebar well">
     <h1>Top Posts</h1>
     <ul>
-        {% for top in site.data.tops %}
-            {% for post in site.posts %}
-                {% if post.url contains top.url %}
-                    <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
-                {% endif %}
-            {% endfor %}
-        {% endfor %}
+        {% for top in site.data.tops -%}
+            {%- for post in site.posts -%}
+                {%- if post.url contains top.url -%}
+                <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
+                {%- endif -%}
+            {%- endfor -%}
+        {%- endfor %}
     </ul>
 </div>
-{% endif %}
-
+{%- endif %}
+<!-- recent posts -->
 <div class="sidebar well">
     <h1>Recent Posts</h1>
     <ul>
-        {% for post in site.posts limit:5 %}
-          <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
-        {% endfor %}
+        {%- for post in site.posts limit:5 %}
+        <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
+        {%- endfor %}
     </ul>
 </div>
-
+<!-- links -->
 <div class="sidebar well">
-    {% include links-list.html %}
+  {% include links-list.html -%}
 </div>

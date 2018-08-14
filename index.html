@@ -1,79 +1,73 @@
 ---
 layout: default
 ---
-{% for post in paginator.posts %}
+{%- for post in paginator.posts -%}
+<!-- {% assign d = post.date | date: "%d" | plus:'0' -%}
+{{ post.date | date: "%B" }}
+{%- case d %}
+{%- when 1 or 21 or 31 %}{{ d }}st,
+{%- when 2 or 22 %}{{ d }}nd,
+{%- when 3 or 23 %}{{ d }}rd,
+{%- else %}{{ d }}th,
+{%- endcase -%}
+{{ post.date | date: "%Y" }} - {{ post.title }} -->
 <div class="well article">
-
     <span class="post-date">
-        <!--
-        {% assign d = post.date | date: "%d" | plus:'0' %}
-        {{ post.date | date: "%B" }}
-        {% case d %}
-        {% when 1 or 21 or 31 %}{{ d }}st,
-        {% when 2 or 22 %}{{ d }}nd,
-        {% when 3 or 23 %}{{ d }}rd,
-        {% else %}{{ d }}th,
-        {% endcase %}
-        {{ post.date | date: "%Y" }}
-        -->
-        {% assign date_format = site.date_format.title %}
+        {%- assign date_format = site.date_format.title %}
         {{ post.date | date: date_format }}
     </span>
-    
     <h2>
         <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
     </h2>
-    
     <div class="post-description">
         {{ post.description }}
     </div>
-    
 </div>
-{% endfor %}
-
+{% endfor -%}
+<!-- page navigation -->
 <nav aria-label="Page navigation">
   <ul class="pagination">
-    {% if paginator.previous_page == 1 %}
+    {% if paginator.previous_page == 1 -%}
     <li>
       <a href="{{ site.baseurl }}/index.html" aria-label="Previous Page">
         <span aria-hidden="true">&laquo;</span>
       </a>
     </li>
-    {% elsif paginator.page == 1 %}
+    {% elsif paginator.page == 1 -%}
     <li class="disabled">
       <a href="#" aria-label="Previous Page">
         <span aria-hidden="true">&laquo;</span>
       </a>
     </li>
-    {% else %}
+    {% else -%}
     <li>
       <a href="{{ site.baseurl }}/page{{ paginator.previous_page }}" aria-label="Previous Page">
         <span aria-hidden="true">&laquo;</span>
       </a>
     </li>
-    {% endif %}
+    {% endif -%}
     <!-- page number items -->
     <li {% if paginator.page == 1 %}class="active"{% endif %}>
       <a href="{{ site.baseurl }}/index.html">1</a>
     </li>
-    {% for page_num in (2..paginator.total_pages) %}
-    <li {% if page_num == paginator.page %}class="active"{% endif %}}>
+    {% for page_num in (2..paginator.total_pages) -%}
+    <li {% if page_num == paginator.page %}class="active"{% endif %}>
       <a href="{{ site.baseurl }}/page{{ page_num }}">{{ page_num }}</a>
     </li>
-    {% endfor %}
+    {% endfor -%}
     <!-- next page arrow button -->
-    {% if paginator.next_page %}
+    {% if paginator.next_page -%}
     <li>
       <a href="{{ site.baseurl }}/page{{ paginator.next_page }}" aria-label="Next Page">
         <span aria-hidden="true">&raquo;</span>
       </a>
     </li>
-    {% else %}
+    {% else -%}
     <li class="disabled">
       <a href="#" aria-label="Next Page">
         <span aria-hidden="true">&raquo;</span>
       </a>
     </li>
-    {% endif %}
+    {% endif -%}
   </ul>
 </nav>

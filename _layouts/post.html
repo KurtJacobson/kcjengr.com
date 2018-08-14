@@ -2,75 +2,75 @@
 layout: default
 ---
 <div class="well article anchor">
-        <h2 class="no-anchor">
-            <a href="{{ site.baseurl}}{{ page.url }}">{{ page.title }}</a>
-        </h2>
-        <span class="post-date">
-            {% assign date_format = site.date_format.title %}
-            {{ page.date | date: date_format }}
-        </span>
-        <hr style="border-top:1px solid #28323C;"/>
-    {% if site.comments and page.comments %}
+    <h2 class="no-anchor">
+        <a href="{{ site.baseurl}}{{ page.url }}">{{ page.title }}</a>
+    </h2>
+    <span class="post-date">
+        {% assign date_format = site.date_format.title -%}
+        {{ page.date | date: date_format }}
+    </span>
+    <hr style="border-top:1px solid #28323C;"/>
+    {%- if site.comments and page.comments %}
         {% if site.disqus != '' %}
         <p class="author"><a href="#disqus_thread" data-disqus-identifier="{{ page.url | slugify }}">Comments</a></p>
         {% elsif site.isso != '' %}
         <p class="author"><a href="{{ site.baseurl }}{{ page.url }}{{ site.isso_suffix }}#isso-thread">Comments</a></p>
         {% endif %}
-    {% endif %}
+    {% endif -%}
     <div class="post-content">
     {{ content }}
     <hr style="border-top:1px solid #28323C;"/>
 
-    <!-- tags and categories under post -->
-    {% unless page.categories == empty %}
+    <!-- post categories -->
+    {% unless page.categories == empty -%}
     <ul class="list-unstyled list-inline">
       <li><i class="icon-folder-open"></i></li>
       {% assign categories_list = page.categories %}
-      {% if categories_list.first[0] == null %}
-        {% for category in categories_list %} 
-            <li class="icon-style"><a href="{{ site.baseurl }}/categories.html">
+      {%- if categories_list.first[0] == null -%}
+        {%- for category in categories_list -%} 
+        <li class="icon-style">
+            <a href="{{ site.baseurl }}/categories.html">
                 {{ category | join: "/" }} <span>({{ site.categories[category].size }})</span>
-                {% unless forloop.last %},{% endunless %}
-            </a></li>
-        {% endfor %}
-      {% else %}
-        {% for category in categories_list %} 
+            {%- unless forloop.last -%},{%- endunless %}
+            </a>
+        </li>
+        {%- endfor -%}
+      {%- else -%}
+        {%- for category in categories_list %} 
             <li class="icon-style"><a href="{{ site.baseurl }}/categories.html">
                 {{ category[0] | join: "/" }} <span>/{{ category[1].size }})</span>
             </a></li>
-        {% endfor %}
-      {% endif %}
+        {%- endfor -%}
+      {%- endif %}
     </ul>
-    {% endunless %}  
-
-    {% unless page.tags == empty %}
+    {%- endunless %}
+    <!-- post tags -->
+    {%- unless page.tags == empty %}
     <ul class="list-unstyled list-inline">
       <li><i class="icon-tags"></i></li>
       {% assign tags_list = page.tags %}
-      {% if tags_list.first[0] == null %}
-        {% for tag in tags_list %} 
-            <li class="icon-style">
-                <a href="{{ site.baseurl }}/tags.html">
+      {%- if tags_list.first[0] == null -%}
+        {%- for tag in tags_list %}
+        <li class="icon-style">
+            <a href="{{ site.baseurl }}/tags.html">
                 {{ tag }} <span>({{ site.tags[tag].size }})</span>
-                {% unless forloop.last %},{% endunless %}
-                </a>
-            </li>
-        {% endfor %}
-      {% else %}
-        {% for tag in tags_list %} 
+            {%- unless forloop.last %},{% endunless %}
+            </a>
+        </li>
+        {%- endfor -%}
+      {%- else -%}
+        {%- for tag in tags_list -%} 
             <li class="icon-style">
                 <a href="{{ site.baseurl }}/tags.html">
                     {{ tag[0] }} <span>({{ tag[1].size }})</span>
                     {% unless forloop.last %},{% endunless %}
                 </a>
             </li>
-           
-        {% endfor %}
-      {% endif %}
+        {%- endfor -%}
+      {%- endif -%}
       {% assign tags_list = nil %}
     </ul>
-    {% endunless %}  
-
+    {% endunless %}
     </div>
     {% if page.comments %}
         {% if site.disqus != '' %}
@@ -87,24 +87,22 @@ layout: default
 <!-- older/newer post navigation -->
 <nav>
   <ul class="pager">
-    {% if page.previous %}
+    {% if page.previous -%}
     <li class="previous">
         <a href="{{ site.baseurl}}{{ page.previous.url }}">
             <span aria-hidden="true">&larr;</span> Older
         </a>
     </li>
-    {% endif %}
-    {% if page.next %}
+    {% endif -%}
+    {% if page.next -%}
     <li class="next">
         <a href="{{ site.baseurl}}{{ page.next.url }}">Newer
             <span aria-hidden="true">&rarr;</span>
         </a>
     </li>
-    {% endif %}
+    {% endif -%}
   </ul>
 </nav>
 
 <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
 {% include lightbox.html %}
-</body>
-</html>
