@@ -5,7 +5,7 @@ layout: default
 <div class="well article">
 {%- assign sortedtags = site.tags | sort -%}
 {%- for tag in sortedtags %}
-    <h2>{{ tag[0] | capitalize }}</h2>
+    <h2>{{ tag[0] }}</h2>
     <ul>
     {%- assign pages_list = tag[1] -%}
     {%- for node in pages_list %}
@@ -22,3 +22,6 @@ layout: default
     </ul>
 {% endfor -%}
 </div>
+
+
+selector 
