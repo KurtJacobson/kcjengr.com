@@ -3,8 +3,8 @@ layout: post
 title:  Heavy Duty Hole Saw Arbor
 date:   2015-06-15 12:00:00 +0500
 categories: Machining
-tags: RF45 Lathe
-description: A simple test post page generate by Jekyll.
+tags:   RF45 Lathe
+description: Making a heavy duty hole saw arbor for more precise drilling in iron and steel.
 ---
 
 Standard hole saw arbors generally are pretty flemsy. They don't hold the saw

@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  Making Chuck Keys for the G0602
+title:  New Chuck Keys for the G0602
 date:   2016-01-09 12:00:00 +0500
 categories: Machining
 tags: G0602 Lathe
-description: Making replacement chuck keys for the three and four jaw chucks.
+description: Making new chuck keys for the Grizzly G0602 lathe.
 
 gallery:
   - image: work-stop.jpg
