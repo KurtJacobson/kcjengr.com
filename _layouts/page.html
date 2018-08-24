@@ -1,0 +1,27 @@
+{%- include header.html -%}
+
+<div class="wrap">
+<div class="container container-left">
+  <div class="row">
+  <!-- BEGIN sidebar -->
+    <div class="col-md-3 hidden-xs">
+    {% include sidebar.html -%}
+      </div>
+      <!-- main content -->
+        <div class="col-md-9">
+          <div class="well article anchor">
+            <h1>{{ page.title }}</h1>
+            <span class="post-date">
+              {% assign date_format = site.date_format.title -%}
+              {{ page.date | date: date_format }}
+            </span>
+            <hr>
+          {{ content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% include footer.html -%}
+  </div>
+</body>
+</html>
