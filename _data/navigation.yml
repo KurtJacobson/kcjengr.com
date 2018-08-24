@@ -13,13 +13,18 @@
 - title: Projects
   subitems:
   - title: RF45 CNC Conversion
-    url: #
+    url: /projects/rf45
   - title: Furnace Build
     url: #
   - title: Bridgeport J-Head
     url: #
   - title: LinuxCNC GUI
     url: #
+
+- title: HowTos
+  subitems:
+    - title: Installing LinuxCNC on Ubuntu
+      url: /howtos/installing-linuxcnc-on-ubuntu.html
 
 - title: About
   url: /about.html
