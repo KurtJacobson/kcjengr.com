@@ -3,6 +3,14 @@ www.kcjengr.com
 
 Source for my personal blog: http://www.kcjengr.com
 
+Building Locally
+----------------
+
+`gem install bundler`
+`bundle install`
+`bundle exec jekyll serve`
+
+
 Powered / Influenced by
 =======================
 
