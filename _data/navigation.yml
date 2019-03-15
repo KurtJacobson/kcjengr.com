@@ -21,6 +21,11 @@
   - title: LinuxCNC GUI
     url: #
 
+- title: Portfolio
+  subitems:
+    - title: Tool and Die
+      url: /portfolio/tool-die.html
+
 - title: HowTos
   subitems:
     - title: Installing LinuxCNC on Ubuntu
