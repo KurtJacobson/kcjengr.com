@@ -10,7 +10,7 @@ description: Example showing how to make it possible to drag/reposition GTK+ wid
 ### Introduction
 
 A simple example showing how to make it possible to drag and reposition GTK+
-widgets with the mouse. Code very similar to this is used the the Drag-n-Drop
+widgets with the mouse. Code very similar to this is used in the Drag-n-Drop
 screen layout editor in [hazzy](https://github.com/kurtjacobson/hazzy).
 
 ### Synopsis

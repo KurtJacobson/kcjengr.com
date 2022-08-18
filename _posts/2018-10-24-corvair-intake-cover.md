@@ -36,7 +36,7 @@ as it came up, a modal notification box informed me that I was not
 to unplug my machine because Windows was doing updates. Argggg
 
 After waiting patiently for about 30min for it to reach 1% completion,
-I unpluged the PC and booted back into Debian Linux.
+I unplugged the PC and booted back into Debian Linux.
 About 5min later I had the part modeled in [SolveSpace](http://solvespace.com),
 sliced in [Slic3r](http://slic3r.org/) and
 printing on a machine running [Marlin](http://marlinfw.org/) firmware.

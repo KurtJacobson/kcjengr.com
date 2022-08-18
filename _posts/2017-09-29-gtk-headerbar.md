@@ -266,5 +266,5 @@ main()
 {% endhighlight %}
 </figure>
 
-The example file can be downloaded from the GitHub Gist located 
+The example file can be downloaded from the GitHub Gist located
 [here](https://gist.github.com/KurtJacobson/6b045b6fc38907a2f18c38f6de2929e3).
