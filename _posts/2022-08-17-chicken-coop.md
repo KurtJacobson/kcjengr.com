@@ -9,4 +9,4 @@ description: Chicken tractor.
 
 Chicken tractor from salvaged materials.
 
-{% include image.html name="interior.jpg" lightbox=true %}
+{% include image.html name="coop.jpg" lightbox=true %}
