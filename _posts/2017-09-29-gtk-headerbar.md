@@ -34,7 +34,7 @@ classed so it should render properly with different themes.
 ### Code
 
 <figure class="lineno-container">
-<figcaption>transparent_window.py</figcaption>
+<figcaption>header_bar.py</figcaption>
 {% highlight python linenos %}
 #!/usr/bin/env python
 
